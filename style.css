@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    /* background-color: rgba(73, 212, 251, 0.54); */
+    background-image: url(images/background-new-3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.side-nav{
+    width: 110px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px 15px;
+    background: rgba(255, 250, 255, 0.2);
+    backdrop-filter: blur(5px);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.5s;
+}  
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+.user div{
+    display: none;
+}
+.user-name{
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.user-img{
+    width: 40px;
+    border-radius: 50%;
+    margin: auto;
+}
+/* .star-img{
+    width: 20px;
+    display: none;
+} */
+ul{
+    list-style: none;
+    padding: 0 15px;
+}
+ul li{
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    cursor: pointer;
+}
+ul li img{
+    width: 30px;
+    margin-right: 10px;
+}
+ul li p{
+    white-space: nowrap;
+    display: none;
+}
+.side-nav:hover{
+    width: 250px;
+}
+.side-nav:hover .user div{
+    display: block;
+
+}
+.side-nav:hover .user{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+/* .side-nav:hover .star-img{
+    display: block;
+    margin: auto;
+} */
+.side-nav:hover .user-img{
+    margin: auto;
+}
+.side-nav:hover li{
+    justify-content: flex-start;
+}
+.side-nav:hover li p{
+    display: flex;
+}
+
+.main-content{
+    padding-top: 50px;
+    padding-left: 110px; /* Initial padding */
+    transition: padding-left 0.5s; /* Add transition for smooth effect */
+}
+
+.side-nav:hover ~ .main-content {
+    padding-left: 250px; /* Adjust padding when side-nav is hovered */
+}   
+
+.main-content h2{
+    font-size: 40px;
+}
